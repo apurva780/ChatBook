@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head><title>SignUp</title></head>
+
+    <body>
+        <style>
+
+            .site-form{
+                margin-top: 10px;
+                padding:30px;
+                border: 1px solid #00dba0;
+            }
+
+            .site-form input,.site-form textarea{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display:block;
+            }
+
+
+        </style>
+        <div class="wrpaper">
+            <h1>Signup</h1>
+            <form class="site-form" action="{% url 'accounts:signup' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Signup">
+            </form>
+        </div>
+    </body>
+</html>

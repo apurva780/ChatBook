@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Data</title>
+    </head>
+    <body>
+        <style>
+
+            .site-form{
+                margin-top: 10px;
+                padding:30px;
+                border: 1px solid #00dba0;
+            }
+
+            .site-form input,.site-form textarea{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display:block;
+            }
+
+
+        </style>
+
+        <form class="site-form" action="{% url 'chatting:add' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Create">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'accounts:logout' %}">LogOut</a>
+                    </li>
+                </ul>
+            </nav>
+        </form>
+    </body>
+</html>
