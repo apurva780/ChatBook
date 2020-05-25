@@ -18,5 +18,5 @@ def add(request):
             return HttpResponse("completed")
     else:
         form = forms.Insert()
-    return render(request,'chat/adding.html',{'form':form})
+        return render(request,'chat/adding.html',{'form':form})
     

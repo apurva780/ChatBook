@@ -40,3 +40,6 @@ def logout_view(request):
         logout(request)   #current login user
         return redirect('accounts:show')
         #return HttpResponse("logout")
+
+def start(request):
+    return render(request,"accounts/getstarted.html")

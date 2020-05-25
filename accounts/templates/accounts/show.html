@@ -1,4 +1,36 @@
-<!DOCTYPE html>
+{%extends 'accounts/start.html'%}
+
+
+{%block content%}
+<a href="{% url 'accounts:login' %}" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Login
+</a>
+<a href="{% url 'accounts:signup' %}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Signup
+</a>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>ChatBook</title>
@@ -20,4 +52,4 @@
         </div>
     </body>
 </html>
-
+ -->
