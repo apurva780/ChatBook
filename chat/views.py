@@ -8,7 +8,7 @@ import os
 # Create your views here.
 
 
-@login_required(login_url="/accounts/login")
+@login_required(login_url="accounts:login")
 def add(request):
     if request.method == 'POST':
         form = forms.Insert(request.POST,request.FILES)
@@ -25,10 +25,8 @@ def add(request):
     else:
         form = forms.Insert()
         return render(request,'chat/adding.html',{'form':form})
-    # patel_mansi_07_09_
-    # eswar._.rajpurohit
-    
-@login_required(login_url="/accounts/login")
+   
+@login_required(login_url="accounts:login")
 def download(request):
     
     with open("./message.txt",'r') as msg:
