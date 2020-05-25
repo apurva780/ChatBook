@@ -18,6 +18,9 @@ from django.urls import path,include
 from . import views
 from accounts import views as accounts_views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 app_name = 'chatting'
 
 urlpatterns = [
@@ -26,3 +29,5 @@ urlpatterns = [
     path('',include('accounts.urls')),
     
 ]
+
+urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
